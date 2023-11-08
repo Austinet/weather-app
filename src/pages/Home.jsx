@@ -28,7 +28,9 @@ const Home = () => {
   //Gets the weather overcast for the current location
   const getWeather = async (latitude, longitude) => {
     try {
-      const url = `/weather?lat=${latitude}&lon=${longitude}&APPID=${import.meta.env.VITE_APP_API_KEY}&units=metric`;
+      const url = `/weather?lat=${latitude}&lon=${longitude}&APPID=${
+        import.meta.env.VITE_APP_API_KEY
+      }&units=metric`;
       // const url = `/weather?q=${"london"}&APPID=${
       //   import.meta.env.VITE_APP_API_KEY
       // }&units=metric`;
@@ -157,23 +159,23 @@ const Home = () => {
             )}
           </section>
           <aside className="bg-[rgba(255,255,255,0.15)] text-white shadow-blue p-[1.5rem] lg:absolute right-0 top-0 lg:min-h-screen lg:w-[550px]">
+            <div className="relative my-[2rem] lg:my-[3rem]">
+              <input
+                type="search"
+                value={searchWeather}
+                onChange={(e) => setSearchWeather(e.target.value)}
+                className="text-black py-3 px-4 pr-[5.2rem] rounded-md font-medium w-full outline-none bxShadow"
+              />
+              <button
+                type="button"
+                onClick={searchCityWeather}
+                className="bg-blue-600 hover:bg-blue-400 text-white py-2 px-4 rounded-md font-semibold absolute top-1 right-1"
+              >
+                Search
+              </button>
+            </div>
             {!isLoading && (
               <div>
-                <div className="relative my-[2rem] lg:my-[3rem]">
-                  <input
-                    type="search"
-                    value={searchWeather}
-                    onChange={(e) => setSearchWeather(e.target.value)}
-                    className="text-black py-3 px-4 pr-[5.2rem] rounded-md font-medium w-full outline-none bxShadow"
-                  />
-                  <button
-                    type="button"
-                    onClick={searchCityWeather}
-                    className="bg-blue-600 hover:bg-blue-400 text-white py-2 px-4 rounded-md font-semibold absolute top-1 right-1"
-                  >
-                    Search
-                  </button>
-                </div>
                 <div className="min-h-[150px] pb-2 max-h-[250px]">
                   <h2 className="text-lg lg:text-2xl font-semibold mb-2">
                     Your Previous Searches
