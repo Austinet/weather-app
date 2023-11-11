@@ -21,18 +21,6 @@
 
 - Create a weather app which displays the current weather condition on the front page but has a search bar on the side to search and display the weather condition of a searched city on a separate page.  
 
-- Set up your routes, and fetch from fake products API using axios. Fetch:  
-
-1. All products
-2. Single product
-
-- Add the ability to add and remove items to the cart.
-- Display added items on the sidebar. 
-- Add the part to increase and decrease the number of items in the cart
-
-- Come up with a design for the single page
-
-N/b: Use this api
 version 1: https://openweathermap.org/api
 
 You can take a cue from this https://weather-wiz-delta.vercel.app/ 
@@ -65,6 +53,7 @@ Desktop Screen Home
 
 - [React](https://reactjs.org/) - JS library
 - Tailwind CSS
+- Local storage
 - vite
 - Axios
 - React Icons
@@ -73,7 +62,7 @@ Desktop Screen Home
 
 ### What I learned
 
-I was able to practice working with ReactJs, Tailwind CSS and Axios.
+I was able to practice working with ReactJs, Tailwind CSS, and Axios.
 I also practiced using the navigator object, useNavigate hook from react router dom, local storage, etc.
 
 ### Continued development
